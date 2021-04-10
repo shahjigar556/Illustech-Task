@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Indie+Flower&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dela+Gothic+One&display=swap');
+:root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    align-items: center;
+    width:100%;
+    background-color: #b5651d;
+    color:white;
+    position:'fixed'
+}
+
+.navbar-center {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width:100%;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color:white
+}
+
+a:hover{
+    color:'black';
+}
+
+
+/*Products */
+
+.product {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    text-align: center;
+}
+
+.img-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    border:1px solid black;
+    background-color:#E8E8E8;
+}
+
+.price{
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+}
+.cart-btn{
+    background-color: #4CAF50;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+    .product{
+        grid-template-columns: 1fr ;
+        text-align: center;
+    }
+  }
+
+.cost{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+
