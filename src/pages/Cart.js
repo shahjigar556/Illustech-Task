@@ -8,6 +8,10 @@ import {useEffect} from 'react';
 function Cart() {
     const [product,setProducts]=useContext(ProductContext);
     const cartProducts=product.filter(p=>p.inCart==true);
+    let cost=0;
+    useEffect(()=>{
+        console.log('In useEffect')
+    },[product])
     console.log(cartProducts);
     useEffect(()=>{
        console.log('In useEffect')
@@ -25,7 +29,6 @@ function Cart() {
 
         )
     }
-    let cost=0
     for(let i=0;i<cartProducts.length;i++){
         cost+=cartProducts[i].price*cartProducts[i].cartQuantity;
     }
@@ -37,7 +40,7 @@ function Cart() {
                 {cartProducts.map(product=><Product key={product._id} product={product} cart={true} />)}
             </div>
             <div className="cost">
-                Cost:$ {cost}
+                Cost:$ {cost.toFixed(2)}
             </div>
         </React.Fragment>
     )

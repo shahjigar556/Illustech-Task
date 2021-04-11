@@ -4,14 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Indie+Flower&family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dela+Gothic+One&display=swap');
-:root {
-    --primaryColor: #f09d51;
-    --mainWhite: #fff;
-    --mainBlack: #222;
-    --mainGrey: #ececec;
-    --mainSpacing: 0.1rem;
-    --mainTransition: all 0.3s linear;
-}
+
 
 /* Navbar */
 
@@ -83,5 +76,12 @@ a:hover{
 .cost{
     font-family: 'Dancing Script', cursive;
     text-align: center;
+    font-size: 24px;
 }
 
+/*footer */
+.footer{
+    background-color: #b5651d;
+    color:white;
+    margin-bottom: 0;
+}

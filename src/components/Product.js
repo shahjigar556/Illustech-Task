@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { ProductContext } from "./ProductContext";
 import {useEffect} from 'react';
+import {useHistory} from 'react-router-dom'; 
 
 function Product({ product, cart }) {
   const [p, setProducts] = useContext(ProductContext);
-  
+  const history=useHistory();
         useEffect(()=>{
             console.log('In useEffect')
         },[product.cartQuantity])
@@ -31,12 +32,18 @@ function Product({ product, cart }) {
          product.cartQuantity+=1;
          product.countInStock-=1;
      }
+     else{
+       alert(`Available Limit reached for Book ${id}`)
+     }
+     history.push('/')
+     history.push('/cart')
      console.log(product.cartQuantity)
      console.log(product.countInStock)
   }
 
   const decr=(id)=>{
       if(product.cartQuantity==1){
+         alert(`Book ${product._id} removed from cart`)
           product.inCart=false;
           product.countInStock+=1;
       }
@@ -44,6 +51,8 @@ function Product({ product, cart }) {
           product.countInStock+=1;
           product.cartQuantity-=1;
       }
+      history.push('/')
+      history.push('/cart')
   }
   return (
     <div className="card">
