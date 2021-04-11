@@ -1,6 +1,6 @@
 ## ILLUSTECH TASK
 
-<a href="https://60727ae1127f471b778677f5--jigarshahbookstore19.netlify.app/cart">Link</a>
+<a href="https://60727ae1127f471b778677f5--jigarshahbookstore19.netlify.app/">Link</a>
 <br />
 Landing Page
 
